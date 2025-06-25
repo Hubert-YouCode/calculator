@@ -3,7 +3,7 @@ import Header from './App/Header';
 import Form from './App/Form';
 import Container from './App/Container';
 import { useState } from 'react';
-import { Currency } from './App/Currency';
+import { Currency } from '../src/App/Form/Currency';
 
 
 
@@ -13,8 +13,8 @@ function App() {
 
     const calculateResult = (currency, amount) => {
         const rate = Currency
-        .find(({short}) => short === currency)
-        .rate;
+            .find(({ short }) => short === currency)
+            .rate;
 
         setResult({
             sourceAmound: +amount,
@@ -26,9 +26,9 @@ function App() {
     return (
         <Container>
             <Header title={"Kalkulator Walut"} />
-            <Form 
-            result={result}
-            calculateResult={calculateResult}
+            <Form
+                result={result}
+                calculateResult={calculateResult}
             />
         </Container>
     );
