@@ -4,6 +4,7 @@ import Form from './App/Form';
 import Container from './App/Container';
 import { useState } from 'react';
 import { Currency } from '../src/App/Form/Currency';
+import Clock from './Clock';
 
 
 
@@ -25,7 +26,8 @@ function App() {
 
     return (
         <Container>
-            <Header title={"Kalkulator Walut"} />
+            <Header 
+            title={"Kalkulator Walut"} />
             <Form
                 result={result}
                 calculateResult={calculateResult}
